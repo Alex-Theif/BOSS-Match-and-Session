@@ -29,9 +29,7 @@ src="https://www.facebook.com/tr?id=10019614348146725&ev=PageView&noscript=1"
     <div class="container">
         <div class="headcontainer">
             <h3 class="headfirst">💥BOSS ( Match & Session )💥</h3>
-            <h5>✅100% Accuracy Milega Yaha✅</h5>
-            <h1 class="time">30</h1>
-            <span class="txt">Second Left</span> 
+            <h5>✅100% Accuracy Milega Yaha✅</h5> 
            <div class="photo">
             <img src="logo.JPG" alt="">
            </div>
@@ -40,39 +38,27 @@ src="https://www.facebook.com/tr?id=10019614348146725&ev=PageView&noscript=1"
            <h4 class="lasthead">⚡63/64 World Cup Toss Pass⚡</h4>
            <h4 class="lasthead">⚡59/61 Big Bash League Toss Pass⚡</h4>
            
-           <a href="https://t.me/+LL_S3jUM0BNlYWY1" ><button class="btn" id="blinking-button" >JOIN THE CHANNEL NOW</button></a>
+           <button class="btn" id="blinking-button">JOIN THE CHANNEL NOW</button>
         </div>
     </div>
 
 
-<!--     <script>
-        var timer = document.querySelector('.time');
-        var bt = document.querySelector('.btn')
-        var tx = document.querySelector('.txt')
+     <script>
+  document.getElementById('blinking-button').addEventListener('click', function() {
+    // Generate unique event ID using timestamp + random number
+    var eventID = 'subscribe_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
 
-        var count = timer.innerText;
-        function set(){
+    // Track with Meta Pixel and include eventID
+    fbq('track', 'Subscribe', {}, { eventID: eventID });
 
-               var sec =  setInterval(() => {
-                if(count == 0) return stopsec()
-                    count--;
-                    timer.innerText = count;
-                }, 1000);
+    // Optional: log it for debugging
+    // console.log("Meta Subscribe Event ID:", eventID);
 
-                
-                function stopsec(){
-                clearInterval(sec);
-                timer.style.visibility = "hidden";
-                tx.style.visibility = "hidden";
-            } 
-        }
-        function redirect(){
-            window.location = "https://t.me/+LL_S3jUM0BNlYWY1";
-        }
-
-        setTimeout('redirect()',30000);
-        set();
-    
-    </script> -->
+    // Delay redirect to give Meta time
+    setTimeout(function() {
+      window.location.href = "https://t.me/+LL_S3jUM0BNlYWY1";
+    }, 200);
+  });
+</script>
 </body>
 </html>
